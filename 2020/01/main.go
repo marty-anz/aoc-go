@@ -36,12 +36,15 @@ func part2() int {
 
 	for i, n := range numbers {
 		for j, m := range numbers {
-			if i != j {
-				left := 2020 - m - n
-				if lookup[left] {
-					return m * n * left
-				}
+			if i == j {
+				continue
 			}
+
+			left := 2020 - m - n
+			if lookup[left] {
+				return m * n * left
+			}
+
 		}
 	}
 

@@ -19,6 +19,7 @@ func Atois(input string) []int {
 	return ns
 }
 
+// look up dictionary
 func Dict[K comparable](list []K) map[K]bool {
 	m := map[K]bool{}
 
