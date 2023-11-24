@@ -34,25 +34,15 @@ func part1() int {
 		char := parts[1][0]
 		pass := parts[2]
 
-		valid := false
 		count := 0
 
 		for _, c := range pass {
 			if byte(c) == char {
 				count += 1
 			}
-
-			if count >= x && count <= y {
-				valid = true
-			}
-
-			if count > y {
-				valid = false
-				break
-			}
 		}
 
-		if valid {
+		if count >= x && count <= y {
 			total += 1
 		}
 	}
