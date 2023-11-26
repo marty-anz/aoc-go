@@ -1,7 +1,7 @@
 package main
 
 import (
-	"aoc/pkg/s"
+	"aoc/pkg/x"
 	_ "embed"
 	"fmt"
 )
@@ -15,9 +15,9 @@ func main() {
 }
 
 func part1() int {
-	numbers := s.Atois(input)
+	numbers := x.Ints(input)
 
-	lookup := s.Dict(numbers)
+	lookup := x.Dict(numbers)
 
 	for _, n := range numbers {
 		m := 2020 - n
@@ -30,9 +30,9 @@ func part1() int {
 }
 
 func part2() int {
-	numbers := s.Atois(input)
+	numbers := x.Ints(input)
 
-	lookup := s.Dict(numbers)
+	lookup := x.Dict(numbers)
 
 	for i, n := range numbers {
 		for j, m := range numbers {

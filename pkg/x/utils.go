@@ -1,4 +1,4 @@
-package s
+package x
 
 import (
 	"strconv"
@@ -7,6 +7,20 @@ import (
 
 // text to int slice
 func Atois(input string) []int {
+	lines := strings.Split(input, "\n")
+
+	ns := []int{}
+
+	for _, l := range lines {
+		n, _ := strconv.Atoi(l)
+		ns = append(ns, n)
+	}
+
+	return ns
+}
+
+// text to int slice
+func Ints(input string) []int {
 	lines := strings.Split(input, "\n")
 
 	ns := []int{}
@@ -28,4 +42,12 @@ func Dict[K comparable](list []K) map[K]bool {
 	}
 
 	return m
+}
+
+func Lines(s string) []string {
+	return strings.Split(strings.TrimSpace(s), "\n")
+}
+
+func Trim(s string) string {
+	return strings.TrimSpace(s)
 }
